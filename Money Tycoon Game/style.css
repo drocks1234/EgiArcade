@@ -1,136 +1,138 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+2 / 2
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 :root {
-  --primary-color: #1c1c1c;
-  --secondary-color: #f5f5f5;
-  --accent-color: #3498db;
-  --button-hover-color: #34495e;
-  --gradient-start-color: #69ff6e; /* Hot Pink */
-  --gradient-end-color: #800080; /* Purple */
+--primary-color: #ffffff;
+--secondary-color: #ffffff;
+--accent-color: #3498db;
 }
 
 body {
-  font-family: 'Roboto', Arial, sans-serif;
-  background: linear-gradient(135deg, var(--gradient-start-color), var(--gradient-end-color));
-  color: var(--secondary-color);
-  display: grid;
-  grid-template-rows: 1fr auto;
-  min-height: 100vh;
-  animation: fadeIn 0.5s ease-out;
+font-family: 'Montserrat', Arial, sans-serif;
+background-color: #ffffff;
+color: #000000;
+display: grid;
+grid-template-rows: 1fr auto;
+min-height: 100vh;
+animation: fadeIn 0.5s ease-out;
 }
 
 .container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding-top: 30px;
+max-width: 800px;
+margin: 0 auto;
+padding-top: 30px;
 }
 
 h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  text-align: center;
-  animation: fadeInDown 1s;
+font-size: 2.5rem;
+font-weight: 700;
+margin-bottom: 20px;
+text-align: center;
+animation: fadeInDown 1s;
 }
 
 h2,
 h3,
 h4 {
-  text-align: center;
-  animation: fadeIn 1s;
+text-align: center;
+animation: fadeIn 1s;
 }
 
 h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+font-size: 2rem;
+margin-bottom: 20px;
 }
 
 h3 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+font-size: 1.5rem;
+margin-bottom: 20px;
 }
 
 h4 {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+font-size: 1.2rem;
+margin-bottom: 20px;
 }
 
 button {
-  font-size: 1.2rem;
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  background-color: var(--accent-color);
-  color: var(--secondary-color);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
-  animation: fadeInUp 1s;
+font-size: 1.2rem;
+padding: 10px 20px;
+border-radius: 5px;
+border: none;
+background-color: #b0b0b0;
+color: var(--secondary-color);
+box-shadow: 0 4px 6px rgba(180, 180, 180, 0.2);
+cursor: pointer;
+transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+animation: fadeInUp 1s;
 }
 
 button:hover {
-  background-color: var(--button-hover-color);
-  color: var(--secondary-color);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+background-color: #b6b6b6;
+color: rgb(255, 255, 255)
+transform: translateY(-2px);
+box-shadow: 0 6px 8px rgba(180, 180, 180, 0.2);
 }
 
-
 button:not(:last-child) {
-  margin-right: 10px;
+margin-right: 10px;
 }
 
 #businessContainer {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
+margin-top: 20px;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 10px;
 }
 
 #businessContainer button {
-  animation: fadeInUp 0.5s ease-out forwards;
+animation: fadeInUp 0.5s ease-out forwards;
 }
 
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
 }
 
 @keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+0% {
+opacity: 0;
+transform: translateY(20px);
+}
+100% {
+opacity: 1;
+transform: translateY(0);
+}
 }
 
 @keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+0% {
+opacity: 0;
+transform: translateY(-20px);
+}
+100% {
+opacity: 1;
+transform: translateY(0);
+}
 }
 
 @keyframes fadeOut {
-  0% {
-    opacity:  0;
-    }
-  }
-  
-  .achievement {
-    animation: fadeIn 2s forwards;
+0% {
+opacity: 0;
+}
+100% {
+opacity: 0;
+}
+}
+
+.achievement {
+animation: fadeIn 2s forwards;
   }
   
   .fadeOut {
