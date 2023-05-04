@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #333;
+  font-family: 'Montserrat', sans-serif;
+  color: #f2f2f2;
+}
+
+canvas {
+  border: 1px solid #f2f2f2;
+}
+
+.game-selection {
+  margin: 50px auto;
+  text-align: center;
+}
+
+button {
+  background-color: #f2f2f2;
+  color: #333;
+  border: none;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 20px;
+  box-shadow: 0px 3px 10px rgba(255, 255, 255, 0.2);
+  transition: all 0.2s ease-in-out;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+@media only screen and (max-width: 600px) {
+  button {
+    padding: 10px;
+    margin: 5px;
+    font-size: 1em;
+  }
+}
