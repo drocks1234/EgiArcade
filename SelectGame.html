@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Game Selection Screen</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<h1>Choose a Game</h1>
+	</header>
+	<section class="game-selection">
+		<button onclick="loadSnakeGame()">Snake Game</button>
+		<button onclick="loadMoneyTycoonGame()">Money Tycoon Game</button>
+	</section>
+
+	<script>
+		function loadSnakeGame() {
+			window.location.href = "Snake-Game.html";
+		}
+
+		function loadMoneyTycoonGame() {
+			window.location.href = "Money-Tycoon-Game.html";
+		}
+	</script>
+</body>
+</html>
