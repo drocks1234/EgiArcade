@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.dom.min.js"></script>
+    <script src="moneyTycoonGame.js"></script>
+    <title>Money Tycoon Game</title>
+</head>
+<body>
+    <div class="moving-background"></div>
+    <div class="moving-background"></div>
+    <div id="alertPopup" class="alert-popup">
+        <span id="alertMessage">You don't have enough money!</span>
+    </div>
+    <div class="container">
+        <h1 class="text-center mb-4">Money Tycoon Game</h1>
+        <div id="achievementContainer"></div>
+        <div class="text-center mb-4">
+            <button id="clickButton" class="btn btn-primary">Click for money</button>
+            <button id="upgradeButton" class="btn btn-success ml-2">Upgrade click</button>
+            <button id="passiveUpgradeButton" class="btn btn-warning ml-2">Upgrade passive income</button>
+        </div>
+        <h2 id="moneyText" class="text-center mb-3"></h2>
+        <h3 id="upgradeClickCostText" class="text-center mb-3"></h3>
+        <h3 id="upgradePassiveIncomeCostText" class="text-center mb-4"></h3>
+        <h4 id="prestigeText" class="text-center mb-4"></h4>
+        <h4 id="incomeText" class="text-center mb-4"></h4>
+        <div id="businessContainer" class="d-flex justify-content-center flex-wrap"></div>
+        <div class="text-center mt-4">
+            <button id="prestigeButton" class="btn btn-danger">Prestige</button>
+        </div>
+    </div>
+</body>
+</html>
