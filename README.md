@@ -1,12 +1,12 @@
-# Snake Game and Money Tycoon
+# Snake Game and Money Tycoon v1.1.7
 
-This repository contains two classic games: Snake and Money Tycoon. Snake is a game where the player moves a snake around the game board and tries to eat food while avoiding collision with the walls or the snake's own body. Money Tycoon is an incremental game where the player earns money by clicking a button and investing in various businesses to increase their passive income.
+This repository contains two classic games: Snake and Money Tycoon, now with improved features and mobile support. Snake is a game where the player moves a snake around the game board and tries to eat food while avoiding collision with the walls or the snake's own body. Money Tycoon is an incremental game where the player earns money by clicking a button and investing in various businesses to increase their passive income.
 
 Both games are built with JavaScript and use HTML canvas for rendering.
 
 ## Getting started
 
-To play the games, open the `index.html` file in a web browser. You can choose between Snake and Money Tycoon by clicking the respective buttons on the main menu. You can control the snake in Snake game using the arrow keys on your keyboard. In Money Tycoon, you can click the button to earn money and buy businesses and upgrades using the on-screen buttons.
+To play the games, open the `index.html` file in a web browser. You can choose between Snake and Money Tycoon by clicking the respective buttons on the main menu. You can control the snake in Snake game using the arrow keys on your keyboard or touch controls on mobile devices. In Money Tycoon, you can click the button to earn money and buy businesses and upgrades using the on-screen buttons.
 
 ## How to play
 
@@ -22,12 +22,12 @@ The objective of Money Tycoon is to earn as much money as possible by clicking t
 
 ### Snake Game
 
-Use the arrow keys on your keyboard to control the snake:
+Use the arrow keys on your keyboard or touch controls on mobile devices to control the snake:
 
-- Left arrow key: Move the snake to the left
-- Right arrow key: Move the snake to the right
-- Up arrow key: Move the snake up
-- Down arrow key: Move the snake down
+- Left arrow key/swipe left: Move the snake to the left
+- Right arrow key/swipe right: Move the snake to the right
+- Up arrow key/swipe up: Move the snake up
+- Down arrow key/swipe down: Move the snake down
 
 ### Money Tycoon
 
