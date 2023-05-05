@@ -6,7 +6,8 @@ window.addEventListener("DOMContentLoaded", function () {
     let blockSize = 20;
     let currentGameSpeed = 100;
     const powerUps = [];
-    
+    let touchStartX = null;
+    let touchStartY = null;    
     let gamePaused = false;
     let score = 0;
     let highScore = 0;
@@ -17,6 +18,7 @@ window.addEventListener("DOMContentLoaded", function () {
     let food = [];
     let dx = blockSize;
     let dy = 0;
+
     
     const newGameButton = document.getElementById("newGameButton");
     newGameButton.addEventListener("click", newGame);
@@ -69,6 +71,60 @@ window.addEventListener("DOMContentLoaded", function () {
         draw();
       }, currentGameSpeed);
     });
+
+
+    function handleTouchStart(event) {
+      if (event.touches.length === 1) {
+        // Only deal with one finger touch
+        touchStartX = event.touches[0].clientX;
+        touchStartY = event.touches[0].clientY;
+      }
+    }
+    
+    function handleTouchEnd(event) {
+      if (!touchStartX || !touchStartY) {
+        return;
+      }
+    
+      const touchEndX = event.changedTouches[0].clientX;
+      const touchEndY = event.changedTouches[0].clientY;
+    
+      const deltaX = touchEndX - touchStartX;
+      const deltaY = touchEndY - touchStartY;
+    
+      if (Math.abs(deltaX) > Math.abs(deltaY)) {
+        // Horizontal swipe
+        if (deltaX > 0 && dx !== -blockSize) {
+          // Swipe right
+          dx = blockSize;
+          dy = 0;
+        } else if (deltaX < 0 && dx !== blockSize) {
+          // Swipe left
+          dx = -blockSize;
+          dy = 0;
+        }
+      } else {
+        // Vertical swipe
+        if (deltaY > 0 && dy !== -blockSize) {
+          // Swipe down
+          dx = 0;
+          dy = blockSize;
+        } else if (deltaY < 0 && dy !== blockSize) {
+          // Swipe up
+          dx = 0;
+          dy = -blockSize;
+        }
+      }
+    
+      // Reset touch start coordinates
+      touchStartX = null;
+      touchStartY = null;
+    }
+    
+    canvas.addEventListener("touchstart", handleTouchStart, { passive: true });
+    canvas.addEventListener("touchend", handleTouchEnd, { passive: true });
+
+
     
     function togglePause() {
       gamePaused = !gamePaused;
