@@ -7,13 +7,25 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #333;
+  background: linear-gradient(135deg, #333, #888888);
   font-family: 'Montserrat', sans-serif;
   color: #f2f2f2;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 canvas {
   border: 1px solid #f2f2f2;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+header {
+  text-align: center;
+  transition: color 0.2s ease-in-out;
+}
+
+header:hover {
+  color: #ccc;
 }
 
 .game-selection {
@@ -32,12 +44,44 @@ button {
   box-shadow: 0px 3px 10px rgba(255, 255, 255, 0.2);
   transition: all 0.2s ease-in-out;
   margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
   cursor: pointer;
+  outline: none;
+  animation: pulsate 1.5s infinite;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+button:first-child {
+  margin-left: 0;
+}
+
+button:active {
+  transform: scale(0.95);
+  box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.1);
 }
 
 button:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
   box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+@media only screen and (max-width: 800px) {
+  canvas {
+    max-width: 90%;
+    height: auto;
+  }
 }
 
 @media only screen and (max-width: 600px) {
