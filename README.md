@@ -1,28 +1,34 @@
-# Snake Game and Money Tycoon v1.1.7
+# Snake Game and Money Tycoon v2.0.0 🚀
 
-This repository contains two classic games: Snake and Money Tycoon, now with improved features and mobile support. Snake is a game where the player moves a snake around the game board and tries to eat food while avoiding collision with the walls or the snake's own body. Money Tycoon is an incremental game where the player earns money by clicking a button and investing in various businesses to increase their passive income.
+Get ready for the next level of gaming with version 2.0.0 of Snake Game and Money Tycoon! This update brings you an enhanced gaming experience with sleek new features, improved performance, and a fresh design. Enjoy the classic Snake game alongside the addictive Money Tycoon, now optimized for both desktop and mobile devices!
 
-Both games are built with JavaScript and use HTML canvas for rendering.
+## 🌟 What's new in v2.0.0?
 
-## Getting started
+- Revamped user interface with a modern and stylish design
+- Improved animations for a smoother and more engaging gameplay
+- Enhanced mobile support, ensuring optimal performance on all devices
+- Updated game settings, allowing for better customization
+- Local leaderboard for the Snake game, so you can compete with your friends and track your progress
 
-To play the games, open the `index.html` file in a web browser. You can choose between Snake and Money Tycoon by clicking the respective buttons on the main menu. You can control the snake in Snake game using the arrow keys on your keyboard or touch controls on mobile devices. In Money Tycoon, you can click the button to earn money and buy businesses and upgrades using the on-screen buttons.
+## 🎮 Getting Started
 
-## How to play
+To play the games, open the `index.html` file in a web browser. You'll be greeted with a sleek new main menu where you can choose between Snake and Money Tycoon by clicking the respective buttons.
+
+## 📖 How to Play
+
+### Snake Game 🐍
+
+Navigate your snake across the game board, eating food and growing in length while avoiding collisions with the walls and the snake's own body. Earn points for each piece of food consumed, and see how high you can get your score!
+
+### Money Tycoon 💰
+
+Put your entrepreneurial skills to the test in Money Tycoon! Click the button to earn money and invest in various businesses to increase your passive income. Buy upgrades to boost your earnings, and watch your fortune grow!
+
+## 🕹️ Controls
 
 ### Snake Game
 
-The objective of the Snake game is to eat as much food as possible without colliding with the walls or the snake's own body. Each time the snake eats a piece of food, it grows in length and the player scores one point. The game ends when the snake collides with the walls or its own body.
-
-### Money Tycoon
-
-The objective of Money Tycoon is to earn as much money as possible by clicking the button and investing in businesses. Players can increase their income by buying upgrades for their clicks and passive income, as well as buying various businesses that generate income over time. The game also features a prestige system, which allows players to reset their progress in exchange for a bonus multiplier that increases their income.
-
-## Controls
-
-### Snake Game
-
-Use the arrow keys on your keyboard or touch controls on mobile devices to control the snake:
+Control the snake using the arrow keys on your keyboard or touch controls on mobile devices:
 
 - Left arrow key/swipe left: Move the snake to the left
 - Right arrow key/swipe right: Move the snake to the right
@@ -31,7 +37,7 @@ Use the arrow keys on your keyboard or touch controls on mobile devices to contr
 
 ### Money Tycoon
 
-Money Tycoon is controlled using the on-screen buttons:
+Interact with Money Tycoon using the on-screen buttons:
 
 - Click button: Click to earn money
 - Upgrade button: Purchase an upgrade for click income
@@ -39,18 +45,18 @@ Money Tycoon is controlled using the on-screen buttons:
 - Business buttons: Purchase various businesses to generate passive income
 - Prestige button: Reset progress in exchange for a bonus multiplier that increases income
 
-## Game settings
+## ⚙️ Game Settings
 
-The game settings for Snake can be accessed by clicking the "Settings" button. You can adjust the following settings:
+Customize your Snake game experience by clicking the "Settings" button. Adjust the following settings to your preference:
 
-- Game speed: Controls the speed at which the snake moves. The faster the speed, the more difficult the game becomes.
-- Food spawn rate: Controls how often food appears on the game board. Increasing this setting will make the game easier by providing more opportunities to eat.
-- Power-up spawn rate: Controls how often power-ups appear on the game board. Power-ups can provide various bonuses to the player, such as extra points or a longer snake.
+- Game speed: Control the snake's movement speed. The faster the speed, the more challenging the game!
+- Food spawn rate: Determine how frequently food appears on the game board. Increasing this setting provides more opportunities to eat and grow your snake.
+- Power-up spawn rate: Decide how often power-ups appear on the game board. Utilize power-ups for various bonuses, such as extra points or a temporarily longer snake.
 
-## High scores
+## 🏆 High Scores
 
-The Snake game keeps track of your high score and displays it at the end of each game. Your high score is saved in your browser's local storage, so it will be remembered even if you close the browser. You can also view the local leaderboard by clicking the "Show Leaderboard" button on the main menu.
+The Snake game keeps track of your high score and displays it at the end of each game. Your high score is saved in your browser's local storage, so it'll be remembered even if you close the browser. Compete with friends by viewing the local leaderboard – just click the "Show Leaderboard" button on the main menu.
 
-## Authors
+## 👩‍💻 Authors
 
-These games were created by [egiday](https://github.com/egiday) using HTML, CSS, and JavaScript. Feel free to use the code as a starting point for your own projects.
+These games were masterfully created by [egiday](https://github.com/egiday) using HTML, CSS, and JavaScript. Feel free to use the code as a foundation for your own projects, and join the excitement of Snake Game and Money Tycoon v2.0.0!
