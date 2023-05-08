@@ -4,25 +4,113 @@
 	<meta charset="UTF-8">
     <title>Game Selection Screen</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
 	<link rel="stylesheet" href="style.css">
+    <style>
+        .game-description {
+            opacity: 0;
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 18px;
+            color: #333;
+            transition: all 0.3s;
+            z-index: 1;
+        }
+
+        button {
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #aaa;
+            color: #111;
+            transform: scale(1.05);
+        }
+
+        button:hover + .game-description {
+            opacity: 1;
+        }
+
+        body {
+            animation: bg-animation 10s infinite;
+            background-size: 400% 400%;
+        }
+
+        @keyframes bg-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        #last-played {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
 	<header>
 		<h1>Choose a Game</h1>
 	</header>
+    <section id="last-played">
+        <h2>Last Played: <span id="last-played-game">None</span></h2>
+        <button id="play-again" onclick="playAgain()" disabled>Play Again</button>
+    </section>
 	<section class="game-selection">
 		<button onclick="loadSnakeGame()">Snake Game</button>
+        <div class="game-description">
+            In Snake Game, guide the snake to eat food while avoiding collisions with the walls or its own body. The more food you eat, the longer the snake grows, and the higher your score!
+        </div>
 		<button onclick="loadMoneyTycoonGame()">Money Tycoon Game</button>
+        <div class="game-description">
+            In Money Tycoon, build your empire by earning money through clicking, investing in businesses, and increasing your passive income. Unlock achievements and prestige to multiply your earnings!
+        </div>
+		<button onclick="loadMoneyPaintingGame()">Painting Game</button>
+        <div class="game-description">
+            In Painting Game, paint the canvas by dragging your mouse across the screen. Its simple really, but you can create some pretty cool art!
+        </div>
 	</section>
 
 	<script>
+        const lastPlayedGame = localStorage.getItem("lastPlayed");
+        if (lastPlayedGame) {
+            document.getElementById("last-played-game").textContent = lastPlayedGame;
+            document.getElementById("play-again").disabled = false;
+        }
+
 		function loadSnakeGame() {
+            localStorage.setItem("lastPlayed", "Snake Game");
 			window.location.href = "Snake Game/SnakeGame.html";
 		}
 
 		function loadMoneyTycoonGame() {
+            localStorage.setItem("lastPlayed", "Money Tycoon Game");
 			window.location.href = "Money Tycoon Game/MoneyTycoonGame.html";
+		}
+
+		function loadMoneyPaintingGame() {
+            localStorage.setItem("lastPlayed", "Painting Game");
+			window.location.href = "Painting Game/PaintingGame.html";
+		}
+
+
+        function playAgain() {
+            const lastPlayed = localStorage.getItem("lastPlayed");
+
+            if (lastPlayed === "Snake Game") {
+                loadSnakeGame();
+            } else if (lastPlayed === "Money Tycoon Game") {
+                loadMoneyTycoonGame();
+            } else if (lastPlayed === "Painting Game") {
+				loadPaintingGame();
+			}
 		}
 	</script>
 </body>
 </html>
+```
