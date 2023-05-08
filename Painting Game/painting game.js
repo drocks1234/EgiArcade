@@ -2,11 +2,14 @@ const canvas = document.getElementById('paintCanvas');
 const ctx = canvas.getContext('2d');
 const brushSize = document.getElementById('brushSize');
 const colorPicker = document.getElementById('colorPicker');
+const brushType = document.getElementById('brushType');
 const clearCanvas = document.getElementById('clearCanvas');
 const saveCanvas = document.getElementById('saveCanvas');
 const undoCanvas = document.getElementById('undoCanvas');
+const eraser = document.getElementById('eraser');
 
 let painting = false;
+let eraserEnabled = false;
 let savedStates = [];
 
 function startPosition(e) {
@@ -26,13 +29,14 @@ function draw(e) {
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
   ctx.lineWidth = brushSize.value;
-  ctx.lineCap = 'round';
-  ctx.strokeStyle = colorPicker.value;
+  ctx.lineCap = brushType.value;
+  ctx.strokeStyle = eraserEnabled ? '#FFFFFF' : colorPicker.value; 
   ctx.lineTo(x, y);
   ctx.stroke();
   ctx.beginPath();
   ctx.moveTo(x, y);
 }
+
 
 function clearCanvasArea() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -57,11 +61,23 @@ function saveAsImage() {
   link.click();
 }
 
+function toggleEraser() {
+  eraserEnabled = !eraserEnabled;
+  eraser.textContent = eraserEnabled ? 'Brush' : 'Eraser';
+}
+
+function updateBrushType() {
+  ctx.lineCap = brushType.value;
+}
+
 canvas.addEventListener('mousedown', startPosition);
 canvas.addEventListener('mouseup', finishedPosition);
 canvas.addEventListener('mousemove', draw);
+brushType.addEventListener('change', updateBrushType);
 clearCanvas.addEventListener('click', clearCanvasArea);
 saveCanvas.addEventListener('click', saveAsImage);
 undoCanvas.addEventListener('click', undo);
+eraser.addEventListener('click', toggleEraser);
+setInitialCanvasBackground();
 
 saveState();
