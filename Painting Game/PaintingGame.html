@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Painting Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="paintCanvas" width="900" height="700"></canvas>
+  <div class="controls">
+    <label for="brushSize">Brush size: </label>
+    <input type="range" id="brushSize" min="1" max="50" value="5">
+    <label for="colorPicker">Color: </label>
+    <input type="color" id="colorPicker" value="#000000">
+    <button id="clearCanvas">Clear canvas</button>
+    <button id="saveCanvas">Save as image</button>
+    <button id="undoCanvas">Undo</button>
+  </div>
+  <script src="painting game.js"></script>
+</body>
+</html>
