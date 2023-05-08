@@ -1,9 +1,10 @@
-# Snake Game and Money Tycoon v2.0.0 🚀
+# Snake Game, Money Tycoon, and Simple Painting v2.5.3 🚀
 
-Get ready for the next level of gaming with version 2.0.0 of Snake Game and Money Tycoon! This update brings you an enhanced gaming experience with sleek new features, improved performance, and a fresh design. Enjoy the classic Snake game alongside the addictive Money Tycoon, now optimized for both desktop and mobile devices!
+Get ready for the next level of gaming with version 2.5.3 of Snake Game, Money Tycoon, and the new addition, Simple Painting Game! This update brings you an enhanced gaming experience with sleek new features, improved performance, and a fresh design. Enjoy the classic Snake game alongside the addictive Money Tycoon and unleash your creativity with the Simple Painting Game, now optimized for both desktop and mobile devices!
 
-## 🌟 What's new in v2.0.0?
+## 🌟 What's new in v2.5.3?
 
+- Introducing the Simple Painting Game: a fun and creative addition to the gaming suite
 - Revamped user interface with a modern and stylish design
 - Improved animations for a smoother and more engaging gameplay
 - Enhanced mobile support, ensuring optimal performance on all devices
@@ -12,7 +13,7 @@ Get ready for the next level of gaming with version 2.0.0 of Snake Game and Mone
 
 ## 🎮 Getting Started
 
-To play the games, open the `index.html` file in a web browser. You'll be greeted with a sleek new main menu where you can choose between Snake and Money Tycoon by clicking the respective buttons.
+To play the games, open the `index.html` file in a web browser. You'll be greeted with a sleek new main menu where you can choose between Snake, Money Tycoon, and Simple Painting Game by clicking the respective buttons.
 
 ## 📖 How to Play
 
@@ -23,6 +24,10 @@ Navigate your snake across the game board, eating food and growing in length whi
 ### Money Tycoon 💰
 
 Put your entrepreneurial skills to the test in Money Tycoon! Click the button to earn money and invest in various businesses to increase your passive income. Buy upgrades to boost your earnings, and watch your fortune grow!
+
+### Simple Painting Game 🎨
+
+Unleash your inner artist with the Simple Painting Game! Draw on a canvas using a customizable brush, choose different colors, and adjust the brush size. You can also clear your artwork, save your masterpiece as an image, or undo your last action.
 
 ## 🕹️ Controls
 
@@ -45,6 +50,17 @@ Interact with Money Tycoon using the on-screen buttons:
 - Business buttons: Purchase various businesses to generate passive income
 - Prestige button: Reset progress in exchange for a bonus multiplier that increases income
 
+### Simple Painting Game
+
+Interact with the Simple Painting Game using the on-screen buttons and your mouse or touch input:
+
+- Left-click/touch: Draw on the canvas
+- Brush size slider: Adjust the size of the brush
+- Color picker: Choose a color for the brush
+- Clear canvas button: Clear the entire canvas
+- Save as image button: Save your artwork as a PNG image
+- Undo button: Undo your last action
+
 ## ⚙️ Game Settings
 
 Customize your Snake game experience by clicking the "Settings" button. Adjust the following settings to your preference:
@@ -59,4 +75,4 @@ The Snake game keeps track of your high score and displays it at the end of each
 
 ## 👩‍💻 Authors
 
-These games were masterfully created by [egiday](https://github.com/egiday) using HTML, CSS, and JavaScript. Feel free to use the code as a foundation for your own projects, and join the excitement of Snake Game and Money Tycoon v2.0.0!
+These games were masterfully created by [egiday](https://github.com/egiday) using HTML, CSS, and JavaScript. Feel free to use the code as a foundation for your own projects, and join the excitement of Snake Game, Money Tycoon, and Simple Painting Game v2.5.3!
