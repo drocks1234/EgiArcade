@@ -4,7 +4,7 @@ Prepare for an exciting gaming experience with version 2.7.0 of EgiArcarde! This
 
 ## 👩‍💻 Authors
 
-These games were masterfully created by [egiday](https://github.com/egiday) using HTML, CSS, and JavaScript. Feel free to use the code as a foundation for your own projects, and join the excitement of Snake Game, Money Tycoon, and Simple Painting Game v2.5.3!
+These games were masterfully updated by [egiday](https://github.com/egiday) using HTML, CSS, and JavaScript. Feel free to use the code as a foundation for your own projects, and join the excitement of EgiArcarde v2.7.0
 
 ## ℹ️ Info
 
@@ -27,7 +27,7 @@ For any other information, feel free to reach out to us via our GitHub profiles 
 
 Thank you for your interest in EgiArcarde. Happy gaming!
 
-## 🌟 What's new in v2.5.3?
+## 🌟 What's new in v2.7.0?
 
 - NEW NAME, WEBSITE, AND GITHUB!
 - Introducing improved features for the Painting Game: Import images, adjust their opacity, and move them around the canvas to incorporate them into your masterpiece.
