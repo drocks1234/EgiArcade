@@ -1,10 +1,36 @@
-# Snake Game, Money Tycoon, and Simple Painting v2.5.3 🚀
+# EgiArcarde v2.7.0 🚀
 
-Get ready for the next level of gaming with version 2.5.3 of Snake Game, Money Tycoon, and the new addition, Simple Painting Game! This update brings you an enhanced gaming experience with sleek new features, improved performance, and a fresh design. Enjoy the classic Snake game alongside the addictive Money Tycoon and unleash your creativity with the Simple Painting Game, now optimized for both desktop and mobile devices!
+Prepare for an exciting gaming experience with version 2.7.0 of EgiArcarde! This update introduces new features, performance improvements, and a fresh design to our suite of games. Enjoy the classic Snake game, the addictive Money Tycoon, and express your creativity with the enhanced Painting Game, now optimized for both desktop and mobile devices!
+
+## 👩‍💻 Authors
+
+These games were masterfully created by [egiday](https://github.com/egiday) using HTML, CSS, and JavaScript. Feel free to use the code as a foundation for your own projects, and join the excitement of Snake Game, Money Tycoon, and Simple Painting Game v2.5.3!
+
+## ℹ️ Info
+
+Welcome to the information section of EgiArcarde. This is where you'll find all the necessary links and details about this project.
+
+### Site
+Visit our website to experience the games firsthand and see all the updates and features we've been working on: [EgiArcarde](https://egiarcade.com)
+
+### GitHub
+Our project is open source, and we encourage contributions from the community. You can access our GitHub repository to see the code, contribute, or even use it as a basis for your own projects. Check it out here: [EgiArcarde GitHub](https://github.com/egiday/website)
+
+### Contributing
+We welcome contributions from everyone, no matter your level of experience. If you're interested in contributing, check out our GitHub repository and look for open issues or propose your own enhancements or fixes. Don't hesitate to fork the repository and make pull requests!
+
+### Feedback and Issues
+If you encounter any issues while playing our games or have any feedback, we'd love to hear from you. Please report these on our GitHub repository's issue tracker. Your feedback helps us improve and offers valuable insight into user experience.
+
+### Contact
+For any other information, feel free to reach out to us via our GitHub profiles or the email provided in the GitHub repository (Email coming soon!).
+
+Thank you for your interest in EgiArcarde. Happy gaming!
 
 ## 🌟 What's new in v2.5.3?
 
-- Introducing the Simple Painting Game: a fun and creative addition to the gaming suite
+- NEW NAME, WEBSITE, AND GITHUB!
+- Introducing improved features for the Painting Game: Import images, adjust their opacity, and move them around the canvas to incorporate them into your masterpiece.
 - Revamped user interface with a modern and stylish design
 - Improved animations for a smoother and more engaging gameplay
 - Enhanced mobile support, ensuring optimal performance on all devices
@@ -27,7 +53,7 @@ Put your entrepreneurial skills to the test in Money Tycoon! Click the button to
 
 ### Simple Painting Game 🎨
 
-Unleash your inner artist with the Simple Painting Game! Draw on a canvas using a customizable brush, choose different colors, and adjust the brush size. You can also clear your artwork, save your masterpiece as an image, or undo your last action.
+Unleash your inner artist with the enhanced Painting Game! Import images, adjust their opacity, and move them around the canvas. Use the customizable brush to draw, choose different colors, and adjust the brush size. You can also clear your artwork, save your masterpiece as an image, or undo your last action.
 
 ## 🕹️ Controls
 
@@ -72,7 +98,3 @@ Customize your Snake game experience by clicking the "Settings" button. Adjust t
 ## 🏆 High Scores
 
 The Snake game keeps track of your high score and displays it at the end of each game. Your high score is saved in your browser's local storage, so it'll be remembered even if you close the browser. Compete with friends by viewing the local leaderboard – just click the "Show Leaderboard" button on the main menu.
-
-## 👩‍💻 Authors
-
-These games were masterfully created by [egiday](https://github.com/egiday) using HTML, CSS, and JavaScript. Feel free to use the code as a foundation for your own projects, and join the excitement of Snake Game, Money Tycoon, and Simple Painting Game v2.5.3!
