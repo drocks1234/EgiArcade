@@ -1,10 +1,8 @@
 # EgiArcarde 🚀
 
-Prepare for an exciting gaming experience with version 2.7.0 of EgiArcarde! This update introduces new features, performance improvements, and a fresh design to our suite of games. Enjoy the classic Snake game, the addictive Money Tycoon, and express your creativity with the enhanced Painting Game, now optimized for both desktop and mobile devices!
-
 ## 👩‍💻 Authors
 
-These games were masterfully updated by [egiday](https://github.com/egiday) using HTML, CSS, and JavaScript. Feel free to use the code as a foundation for your own projects, and join the excitement of EgiArcarde v2.7.0
+These games were masterfully updated by [egiday](https://github.com/egiday) using HTML, CSS, and JavaScript. Feel free to use the code as a foundation for your own projects, and join the excitement of EgiArcarde
 
 ## ℹ️ Info
 
