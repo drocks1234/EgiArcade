@@ -29,13 +29,9 @@ Thank you for your interest in EgiArcarde. Happy gaming!
 
 ## 🌟 What's new in v2.7.0?
 
-- NEW NAME, WEBSITE, AND GITHUB!
 - Introducing improved features for the Painting Game: Import images, adjust their opacity, and move them around the canvas to incorporate them into your masterpiece.
 - Revamped user interface with a modern and stylish design
 - Improved animations for a smoother and more engaging gameplay
-- Enhanced mobile support, ensuring optimal performance on all devices
-- Updated game settings, allowing for better customization
-- Local leaderboard for the Snake game, so you can compete with your friends and track your progress
 
 ## 🎮 Getting Started
 
