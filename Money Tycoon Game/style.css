@@ -17,7 +17,7 @@ animation: fadeIn 0.5s ease-out;
 }
 
 .container {
-max-width: 800px;
+max-width: 1500px;
 margin: 0 auto;
 padding-top: 30px;
 }
@@ -66,15 +66,15 @@ animation: fadeInUp 1s;
 }
 
 button:hover {
-background-color: #b6b6b6;
-color: rgb(255, 255, 255)
-transform: translateY(-2px);
-box-shadow: 0 6px 8px rgba(180, 180, 180, 0.2);
-}
-
-button:not(:last-child) {
-margin-right: 10px;
-}
+  background-color: #b6b6b6;
+  color: rgb(255, 255, 255);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(180, 180, 180, 0.2);
+  }
+  
+  button:not(:last-child) {
+  margin-right: 10px;
+  }  
 
 #businessContainer {
 margin-top: 20px;
@@ -86,6 +86,21 @@ gap: 10px;
 
 #businessContainer button {
 animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.business-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.business-container button {
+  flex: 1 1 auto;
+  margin: 10px;
+  min-width: 150px;
+}
+
+.my-button {
+  margin: 10px; /* Adjust as needed */
 }
 
 @keyframes fadeIn {

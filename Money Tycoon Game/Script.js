@@ -4,11 +4,15 @@ let money = 0;
 let moneyPerClick = 1;
 let moneyPerSecond = 0;
 let upgradeCost = 10;
-let upgradeMultiplier = 2;
+let upgradeMultiplier = 1.15;
+let CostMultiplier = 2;
 let passiveUpgradeCost = 25;
 let passiveUpgradeMultiplier = 1.5;
 let prestigePoints = 0;
+let prestigeCost = 1000000;
 
+
+// Business information
 // Business information
 let businesses = [
   {
@@ -19,13 +23,70 @@ let businesses = [
     quantity: 0,
   },
   {
-    name: "Ice Cream Truck",
+    name: "IceCream Truck",
     cost: 500,
     initialCost: 500,
     income: 50,
     quantity: 0,
   },
+  {
+    name: "Coffee Shop",
+    cost: 1000,
+    initialCost: 1000,
+    income: 100,
+    quantity: 0,
+  },
+  {
+    name: "Fast Food Chain",
+    cost: 5000,
+    initialCost: 5000,
+    income: 250,
+    quantity: 0,
+  },
+  {
+    name: "Movie Theater",
+    cost: 15000,
+    initialCost: 15000,
+    income: 750,
+    quantity: 0,
+  },
+  {
+    name: "Shopping Mall",
+    cost: 50000,
+    initialCost: 50000,
+    income: 2000,
+    quantity: 0,
+  },
+  {
+    name: "Supermarket",
+    cost: 100000,
+    initialCost: 100000,
+    income: 4000,
+    quantity: 0,
+  },
+  {
+    name: "Hotel Chain",
+    cost: 500000,
+    initialCost: 500000,
+    income: 10000,
+    quantity: 0,
+  },
+  {
+    name: "Airline",
+    cost: 1000000,
+    initialCost: 1000000,
+    income: 20000,
+    quantity: 0,
+  },
+  {
+    name: "Cruise Line",
+    cost: 5000000,
+    initialCost: 5000000,
+    income: 50000,
+    quantity: 0,
+  }
 ];
+
 
 // Achievements
 let achievements = [
@@ -43,6 +104,64 @@ let achievements = [
   },
 ];
 
+let researches = [
+  {
+    name: "Efficient Operations",
+    description: "Increase income from all businesses by 10%.",
+    cost: 500,
+    timeToComplete: 60, // 60 seconds
+    progress: 0, // Progress towards completion (0 to 100)
+    completed: false,
+    applyEffect: () => businesses.forEach((business) => business.income *= 1.1),
+  },
+  {
+    name: "Marketing Campaign",
+    description: "Increase income from clicks by 20%.",
+    cost: 500,
+    timeToComplete: 30, // 30 seconds
+    progress: 0, // Progress towards completion (0 to 100)
+    completed: false,
+    applyEffect: () => moneyPerClick *= 1.2,
+  },
+  {
+    name: "Eco-Friendly Packaging",
+    description: "Reduce costs of all businesses by 5%.",
+    cost: 750,
+    timeToComplete: 120, // 120 seconds
+    progress: 0, // Progress towards completion (0 to 100)
+    completed: false,
+    applyEffect: () => businesses.forEach((business) => business.cost *= 0.95),
+  },
+  {
+    name: "Innovative Marketing",
+    description: "Increase income from clicks by 30%.",
+    cost: 750,
+    timeToComplete: 60, // 60 seconds
+    progress: 0, // Progress towards completion (0 to 100)
+    completed: false,
+    applyEffect: () => moneyPerClick *= 1.3,
+  },
+  {
+    name: "Workforce Training",
+    description: "Increase passive income by 10%.",
+    cost: 1500,
+    timeToComplete: 90, // 90 seconds
+    progress: 0, // Progress towards completion (0 to 100)
+    completed: false,
+    applyEffect: () => moneyPerSecond *= 1.1,
+  },
+  {
+    name: "Supply Chain Optimization",
+    description: "Reduce cost of future business upgrades by 5%.",
+    cost: 2000,
+    timeToComplete: 180, // 180 seconds
+    progress: 0, // Progress towards completion (0 to 100)
+    completed: false,
+    applyEffect: () => CostMultiplier *= 0.95,
+  }
+  
+];
+
 // UI elements
 let clickButton;
 let upgradeButton;
@@ -54,6 +173,7 @@ let upgradeClickCostText;
 let upgradePassiveIncomeCostText;
 let incomeText;
 let businessButtons = [];
+let researchButtons = [];
 
 // Click sound effect
 const clickSound = new Audio('click.mp3');
@@ -80,13 +200,26 @@ function setup() {
   incomeText = select('#incomeText');
   prestigeText = select("#prestigeText");
 
-  // Business buttons setup
+  let researchContainer = select('#researchContainer')
+  researches.forEach((research, index) => {
+    const button = createButton(`Start ${research.name} ($${research.cost})`);
+    button.mousePressed(() => startResearch(index));
+    let div = createDiv().parent(researchContainer);
+    div.addClass("col-lg-2 col-md-4 col-sm-6"); 
+    button.parent(div);
+    researchButtons.push(button);
+  });
+
+  let businessContainer = select('#businessContainer');
   businesses.forEach((business, index) => {
     const button = createButton(`Buy ${business.name} ($${business.cost})`);
     button.mousePressed(() => buyBusiness(index));
-    button.parent('businessContainer');
+    let div = createDiv().parent(businessContainer);
+    div.addClass("col-lg-2 col-md-4 col-sm-6"); 
+    button.parent(div);
+    button.addClass("my-button"); // Add class
     businessButtons.push(button);
-  });
+});
 }
 
 // Draw function
@@ -99,14 +232,35 @@ function draw() {
   upgradeClickCostText.html("Upgrade click cost: $" + upgradeCost);
   upgradePassiveIncomeCostText.html("Upgrade passive income cost: $" + passiveUpgradeCost);
   incomeText.html("Income: $" + moneyPerSecond.toFixed(2) + "/sec");
-  prestigeText.html(`Prestige Points: ${prestigePoints}`);
-
-  // Update business buttons text
+  prestigeButton.html(`Prestige ($${prestigeCost}) - Prestige Points: ${prestigePoints}`);
   businessButtons.forEach((button, index) => {
     button.html(
-      `Buy ${businesses[index].name} ($${businesses[index].cost.toFixed(
+      `${businesses[index].name} ($${businesses[index].cost.toFixed(
         2
       )}) - Owned: ${businesses[index].quantity}`
+    );
+  });
+
+  researches.forEach((research) => {
+    // If research is in progress and not completed
+    if (research.progress > 0 && research.progress < 100) {
+      // Increase progress based on time and research duration
+      research.progress += (deltaTime / 1000) * (100 / research.timeToComplete);
+
+      // Check if research is completed
+      if (research.progress >= 100) {
+        research.progress = 100;
+        research.completed = true;
+        research.applyEffect();
+        showAlertPopup(`${research.name} completed!`);
+      }
+    }
+  });
+
+  // Update research buttons text
+  researchButtons.forEach((button, index) => {
+    button.html(
+      `Start ${researches[index].name} ($${researches[index].cost.toFixed(2)}) - Progress: ${researches[index].progress.toFixed(2)}%`
     );
   });
 
@@ -133,11 +287,24 @@ function buyBusiness(index) {
     moneyPerSecond += businesses[index].income * prestigeBonusMultiplier;
 
     // Improve business upgrade cost calculation
-    businesses[index].cost *= 1 + (upgradeMultiplier - 1) / 2;
+    businesses[index].cost *= 1 + (CostMultiplier - 1) / 2;
   } else {
     showAlertPopup("You don't have enough money to buy this business!");
   }
 }
+
+function startResearch(index) {
+  const research = researches[index];
+
+  // Check if player has enough money and the research is not already completed or in progress
+  if (money < research.cost || research.progress > 0 || research.completed) {
+    showAlertPopup("You can't start this research!");
+  } else {
+    money -= research.cost;
+    research.progress = 0.01; // Start research
+  }
+}
+
 
 function upgradePassiveIncome() {
   // Check if player has enough money to upgrade passive income
@@ -157,7 +324,7 @@ function upgradeClick() {
   } else {
     money -= upgradeCost;
     moneyPerClick *= upgradeMultiplier;
-    upgradeCost *= upgradeMultiplier;
+    upgradeCost *= CostMultiplier;
   }
 }
 
@@ -183,7 +350,7 @@ function checkAchievements() {
 }
 
 function prestige() {
-  if (money >= 10000) {
+  if (money >= prestigeCost) {
     prestigePoints += 1;
     money = 0;
     moneyPerClick = 1;
@@ -196,6 +363,8 @@ function prestige() {
     });
     // Update the prestige bonus multiplier
     prestigeBonusMultiplier = 1 + (prestigePoints * 0.1); // Increase income by 10% for each prestige point
+  } else {
+    showAlertPopup("You don't have enough money to prestige!");
   }
 }
 
