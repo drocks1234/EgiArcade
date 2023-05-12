@@ -220,12 +220,16 @@ function setup() {
     button.addClass("my-button"); // Add class
     businessButtons.push(button);
 });
+loadGame();
 }
 
 // Draw function
 function draw() {
   // Increment money by passive income
   money += moneyPerSecond * deltaTime / 1000;
+
+  // Update UI text
+  moneyText.html("Money: $" + formatMoney(money));
 
   // Update UI text
   moneyText.html("Money: $" + money.toFixed(2));
@@ -240,6 +244,25 @@ function draw() {
       )}) - Owned: ${businesses[index].quantity}`
     );
   });
+  if (frameCount % (10 * 60) === 0) {
+    saveGame();
+  }
+}
+
+function formatMoney(amount) {
+  // Nine Zeroes for Billions
+  return Math.abs(Number(amount)) >= 1.0e+15
+    ? (Math.abs(Number(amount)) / 1.0e+15).toFixed(2) + "q"
+    : Math.abs(Number(amount)) >= 1.0e+12
+    ? (Math.abs(Number(amount)) / 1.0e+12).toFixed(2) + "t"
+    : Math.abs(Number(amount)) >= 1.0e+9
+    ? (Math.abs(Number(amount)) / 1.0e+9).toFixed(2) + "b"
+    : Math.abs(Number(amount)) >= 1.0e+6
+    ? (Math.abs(Number(amount)) / 1.0e+6).toFixed(2) + "m"
+    : Math.abs(Number(amount)) >= 1.0e+3
+    ? (Math.abs(Number(amount)) / 1.0e+3).toFixed(2) + "k"
+    : Math.abs(Number(amount));
+}
 
   researches.forEach((research) => {
     // If research is in progress and not completed
@@ -265,7 +288,7 @@ function draw() {
   });
 
   checkAchievements();
-}
+  saveGame();
 
 // Function definitions
 
@@ -377,3 +400,51 @@ function showAlertPopup(message) {
     alertPopup.style.display = "none";
   }, 3000);
 }
+
+function saveGame() {
+  // Create a save object
+  let save = {
+    prestigeBonusMultiplier: prestigeBonusMultiplier,
+    money: money,
+    moneyPerClick: moneyPerClick,
+    moneyPerSecond: moneyPerSecond,
+    upgradeCost: upgradeCost,
+    upgradeMultiplier: upgradeMultiplier,
+    CostMultiplier: CostMultiplier,
+    passiveUpgradeCost: passiveUpgradeCost,
+    passiveUpgradeMultiplier: passiveUpgradeMultiplier,
+    prestigePoints: prestigePoints,
+    prestigeCost: prestigeCost,
+    businesses: businesses,
+    researches: researches,
+    achievements: achievements,
+  };
+
+  // Save the save object to local storage
+  localStorage.setItem("save", JSON.stringify(save));
+}
+
+function loadGame() {
+  // Load save from local storage
+  let save = JSON.parse(localStorage.getItem("save"));
+
+  // Check if there is a save in local storage
+  if (save) {
+    // Load game variables
+    prestigeBonusMultiplier = save.prestigeBonusMultiplier;
+    money = save.money;
+    moneyPerClick = save.moneyPerClick;
+    moneyPerSecond = save.moneyPerSecond;
+    upgradeCost = save.upgradeCost;
+    upgradeMultiplier = save.upgradeMultiplier;
+    CostMultiplier = save.CostMultiplier;
+    passiveUpgradeCost = save.passiveUpgradeCost;
+    passiveUpgradeMultiplier = save.passiveUpgradeMultiplier;
+    prestigePoints = save.prestigePoints;
+    prestigeCost = save.prestigeCost;
+    businesses = save.businesses;
+    researches = save.researches;
+    achievements = save.achievements;
+  }
+}
+
