@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Number Guessing Game</title>
+</head>
+<body>
+    <div id="gameContainer">
+        <h1>Number Guessing Game</h1>
+        <p>Guess a number between 1 and 100</p>
+        <p id="totalScoreContainer">Total Score: 0</p> 
+        <p id="roundScoreContainer" class="roundScore">Current Round Score: 10</p>
+        <label for="guessField">Guess a number:</label> 
+        <input type="number" id="guessField" min="1" max="100" class="guessField">
+        <button id="submitGuess" class="guessSubmit">Submit Guess</button>
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange" disabled aria-label="Slider indicating closeness to the correct number">
+        <p id="resultContainer" class="guesses"></p>
+        <p id="timerContainer"></p>
+        <p class="lastResult"></p>
+        <p class="lowOrHi"></p>
+        <button id="resetButton" class="hidden">Start New Game</button>
+        <p id="infoText">Guess a number between 1 and 100. The slider indicates how close you are to the correct number - red is hot (close) and blue is cold (far).</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

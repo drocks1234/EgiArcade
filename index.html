@@ -74,6 +74,10 @@
         <div class="game-description">
             In Painting Game, paint the canvas by dragging your mouse across the screen. Its simple really, but you can create some pretty cool art!
         </div>
+        <button onclick="loadNumberGuessingGame()">Number Guessing Game</button>
+        <div class="game-description">
+            In Number Guessing Game, your objective is to guess a secret number between 1 and 100. your score decreases with each incorrect guess. Try to get the highest score possible!
+        </div>
 	</section>
 
 	<script>
@@ -98,6 +102,11 @@
 			window.location.href = "Painting Game/PaintingGame.html";
 		}
 
+        function loadNumberGuessingGame() {
+            localStorage.setItem("lastPlayed", "Number Guessing Game");
+            window.location.href = "Number Guessing Game/NumberGuessingGame.html";
+        }
+
 
         function playAgain() {
             const lastPlayed = localStorage.getItem("lastPlayed");
@@ -108,7 +117,9 @@
                 loadMoneyTycoonGame();
             } else if (lastPlayed === "Painting Game") {
 				loadPaintingGame();
-			}
+			} else if (lastPlayed === "Number Guessing Game") {
+                loadNumberGuessingGame();
+            }
 		}
 	</script>
 </body>
