@@ -109,7 +109,7 @@ Interact with Blackjack using the on-screen buttons:
 
 - Deal button: Start a new round and deal the initial cards
 - Hit button: Request an additional card from the dealer
-- Stand button: Decline any more cards and end your turn
+- Stand button: Decline any more cards, ends your turn
 
 ### Rock Paper Scissors ✊✋✌️
 
