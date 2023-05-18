@@ -47,9 +47,25 @@ Unleash your inner artist with the enhanced Painting Game! Import images, adjust
 
 Test your intuition with the Number Guessing Game! The game generates a secret number between 1 and 100, and your objective is to guess this number. You have 10 attempts per round, and your score decreases with each incorrect guess. A 'hot and cold' slider gives you a hint on how close your guess is to the secret number: red means you're hot (close), while blue means you're cold (far). The goal is to guess the secret number with as few attempts as possible to maximize your score!
 
+### Blackjack ♠️♥️♦️♣️
+
+Step into the world of cards and try your luck in Blackjack! The objective is to get as close to 21 as possible without going over. Make strategic decisions to hit or stand and beat the dealer to win big.
+
+### Rock Paper Scissors ✊✋✌️
+
+Engage in the classic game of Rock Paper Scissors! Challenge the computer and choose between rock, paper, or scissors. Remember the rules: rock beats scissors, scissors beats paper, and paper beats rock. Can you outsmart the computer?
+
+### Minesweeper 💣
+
+Prepare for a thrilling adventure in Minesweeper! Uncover the hidden mines on the board by clicking on the squares. But be careful, as revealing a mine will end the game. Use strategy and logic to clear the board and achieve victory.
+
+### Simon Game 🎵
+
+Test your memory and pattern recognition skills in Simon Game! The computer will show you a sequence of colors, and your task is to repeat the pattern correctly. The sequences become longer and more challenging as you progress. How far can you go?
+
 ## 🕹️ Controls
 
-### Snake Game
+### Snake Game 🐍
 
 Control the snake using the arrow keys on your keyboard or touch controls on mobile devices:
 
@@ -58,7 +74,7 @@ Control the snake using the arrow keys on your keyboard or touch controls on mob
 - Up arrow key/swipe up: Move the snake up
 - Down arrow key/swipe down: Move the snake down
 
-### Money Tycoon
+### Money Tycoon 💰
 
 Interact with Money Tycoon using the on-screen buttons:
 
@@ -68,7 +84,7 @@ Interact with Money Tycoon using the on-screen buttons:
 - Business buttons: Purchase various businesses to generate passive income
 - Prestige button: Reset progress in exchange for a bonus multiplier that increases income
 
-### Simple Painting Game
+### Simple Painting Game 🎨
 
 Interact with the Simple Painting Game using the on-screen buttons and your mouse or touch input:
 
@@ -79,13 +95,41 @@ Interact with the Simple Painting Game using the on-screen buttons and your mous
 - Save as image button: Save your artwork as a PNG image
 - Undo button: Undo your last action
 
-### Number Guessing Game
+### Number Guessing Game 🎲
 
 Interact with Number Guessing Game using the on-screen input field and buttons:
 
 - Guess Field: Enter your guess into the input field. You can enter any integer from 1 to 100.
 - Submit Guess button: Click to submit your current guess. The game will tell you if you're correct or if your guess is too high or too low. You also get feedback via the 'hot and cold' slider.
 - Start New Game button: After a round is over, click this button to start a new round with a new secret number.
+
+### Blackjack ♠️♥️♦️♣️
+
+Interact with Blackjack using the on-screen buttons:
+
+- Deal button: Start a new round and deal the initial cards
+- Hit button: Request an additional card from the dealer
+- Stand button: Decline any more cards and end your turn
+
+### Rock Paper Scissors ✊✋✌️
+
+Interact with Rock Paper Scissors using the on-screen buttons:
+
+- Rock button: Choose rock as your move
+- Paper button: Choose paper as your move
+- Scissors button: Choose scissors as your move
+
+### Minesweeper 💣
+
+Interact with Minesweeper using the on-screen buttons:
+
+- Left-click: Reveal a cell on the grid
+
+### Simon Game 🎵
+
+Interact with Simon Game using the on-screen buttons:
+
+- Click the colored buttons in the order shown by the computer.
 
 ## ⚙️ Game Settings
 
