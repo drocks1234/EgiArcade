@@ -54,47 +54,27 @@
     </style>
 </head>
 <body>
-	<header>
-		<h1>Choose a Game</h1>
-	</header>
+    <header>
+      <h1>Choose a Game</h1>
+    </header>
     <section id="last-played">
-        <h2>Last Played: <span id="last-played-game">None</span></h2>
-        <button id="play-again" onclick="playAgain()" disabled>Play Again</button>
+      <h2>Last Played: <span id="last-played-game">None</span></h2>
+      <button id="play-again" onclick="playAgain()" disabled>Play Again</button>
     </section>
-	<section class="game-selection">
-		<button onclick="loadSnakeGame()">Snake Game</button>
-        <div class="game-description">
-            In Snake Game, guide the snake to eat food while avoiding collisions with the walls or its own body. The more food you eat, the longer the snake grows, and the higher your score!
-        </div>
-		<button onclick="loadMoneyTycoonGame()">Money Tycoon Game</button>
-        <div class="game-description">
-            In Money Tycoon, build your empire by earning money through clicking, investing in businesses, and increasing your passive income. Unlock achievements and prestige to multiply your earnings!
-        </div>
-		<button onclick="loadPaintingGame()">Painting Game</button>
-        <div class="game-description">
-            In Painting Game, paint the canvas by dragging your mouse across the screen. Its simple really, but you can create some pretty cool art!
-        </div>
+    <section class="game-selection">
+      <div class="row">
+        <button onclick="loadSnakeGame()">Snake Game</button>
+        <button onclick="loadMoneyTycoonGame()">Money Tycoon Game</button>
+        <button onclick="loadPaintingGame()">Painting Game</button>
         <button onclick="loadNumberGuessingGame()">Number Guessing Game</button>
-        <div class="game-description">
-            In Number Guessing Game, your objective is to guess a secret number between 1 and 100. your score decreases with each incorrect guess. Try to get the highest score possible!
-        </div>
+      </div>
+      <div class="row">
         <button onclick="loadBlackjack()">Blackjack</button>
-        <div class="game-description">
-            In Blackjack, your objective is to get as close to 21 as possible without going over. You can choose to hit or stand. If you get 21, you win!
-        </div>
         <button onclick="loadRockPaperScissors()">Rock Paper Scissors</button>
-        <div class="game-description">
-            In Rock Paper Scissors, choose between rock, paper, or scissors. Rock beats scissors, scissors beats paper, and paper beats rock. Try to beat the computer!
-        </div>
         <button onclick="loadMinesweeper()">Minesweeper</button>
-        <div class="game-description">
-            In Minesweeper, your objective is to clear the board without hitting any mines. Click on a square to reveal it. If you reveal a mine, you lose!
-        </div>
         <button onclick="loadSimonGame()">Simon Game</button>
-        <div class="game-description">
-            In Simon Game, your objective is to repeat the pattern of colors that the computer shows you. The pattern gets longer and longer as you progress. How far can you get?
-        </div>
-	</section>
+      </div>
+    </section>
 
 	<script>
         const lastPlayedGame = localStorage.getItem("lastPlayed");
