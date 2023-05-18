@@ -43,6 +43,10 @@ Put your entrepreneurial skills to the test in Money Tycoon! Click the button to
 
 Unleash your inner artist with the enhanced Painting Game! Import images, adjust their opacity, and move them around the canvas. Use the customizable brush to draw, choose different colors, and adjust the brush size. You can also clear your artwork, save your masterpiece as an image, or undo your last action.
 
+### Number Guessing Game 🎲
+
+Test your intuition with the Number Guessing Game! The game generates a secret number between 1 and 100, and your objective is to guess this number. You have 10 attempts per round, and your score decreases with each incorrect guess. A 'hot and cold' slider gives you a hint on how close your guess is to the secret number: red means you're hot (close), while blue means you're cold (far). The goal is to guess the secret number with as few attempts as possible to maximize your score!
+
 ## 🕹️ Controls
 
 ### Snake Game
@@ -75,6 +79,14 @@ Interact with the Simple Painting Game using the on-screen buttons and your mous
 - Save as image button: Save your artwork as a PNG image
 - Undo button: Undo your last action
 
+### Number Guessing Game
+
+Interact with Number Guessing Game using the on-screen input field and buttons:
+
+- Guess Field: Enter your guess into the input field. You can enter any integer from 1 to 100.
+- Submit Guess button: Click to submit your current guess. The game will tell you if you're correct or if your guess is too high or too low. You also get feedback via the 'hot and cold' slider.
+- Start New Game button: After a round is over, click this button to start a new round with a new secret number.
+
 ## ⚙️ Game Settings
 
 Customize your Snake game experience by clicking the "Settings" button. Adjust the following settings to your preference:
@@ -86,3 +98,7 @@ Customize your Snake game experience by clicking the "Settings" button. Adjust t
 ## 🏆 High Scores
 
 The Snake game keeps track of your high score and displays it at the end of each game. Your high score is saved in your browser's local storage, so it'll be remembered even if you close the browser. Compete with friends by viewing the local leaderboard – just click the "Show Leaderboard" button on the main menu.
+
+The Number Guessing Game keeps track of your total score over multiple rounds. The goal is to get the highest total score possible. Your total score is displayed on screen and is saved in your browser's local storage, so it'll be remembered even if you close the browser.
+
+Enjoy playing!
