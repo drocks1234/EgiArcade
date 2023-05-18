@@ -1,0 +1,155 @@
+body {
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-right: 10px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+button:active {
+    background: #004085;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.score {
+    margin: 0 20px;
+}
+
+.score p {
+    margin: 5px 0;
+}
+
+#wins,
+#losses {
+    font-size: 1.2em;
+    color: #fff;
+    font-weight: bold;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #007BFF, #00FFFF);
+    opacity: 0.2;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.player-choice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.player-choice img {
+    width: 80px;
+    height: 80px;
+    margin: 0 10px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.player-choice img:hover {
+    opacity: 1;
+}
+
+#computer-choice {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #fff;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+#computer-choice:hover {
+    opacity: 1;
+}
+
+#result-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.play-again {
+    margin-top: 20px;
+}
+
+.play-again button {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    background: #17a2b8;
+    transition: background 0.3s;
+}
+
+.play-again button:hover {
+    background: #138496;
+}
+
+.play-again button:active {
+    background: #0c6b7b;
+}
+
+.win {
+    color: #28a745;
+}
+
+.loss {
+    color: #dc3545;
+}

@@ -78,6 +78,22 @@
         <div class="game-description">
             In Number Guessing Game, your objective is to guess a secret number between 1 and 100. your score decreases with each incorrect guess. Try to get the highest score possible!
         </div>
+        <button onclick="loadBlackjack()">Blackjack</button>
+        <div class="game-description">
+            In Blackjack, your objective is to get as close to 21 as possible without going over. You can choose to hit or stand. If you get 21, you win!
+        </div>
+        <button onclick="loadRockPaperScissors()">Rock Paper Scissors</button>
+        <div class="game-description">
+            In Rock Paper Scissors, choose between rock, paper, or scissors. Rock beats scissors, scissors beats paper, and paper beats rock. Try to beat the computer!
+        </div>
+        <button onclick="loadMinesweeper()">Minesweeper</button>
+        <div class="game-description">
+            In Minesweeper, your objective is to clear the board without hitting any mines. Click on a square to reveal it. If you reveal a mine, you lose!
+        </div>
+        <button onclick="loadSimonGame()">Simon Game</button>
+        <div class="game-description">
+            In Simon Game, your objective is to repeat the pattern of colors that the computer shows you. The pattern gets longer and longer as you progress. How far can you get?
+        </div>
 	</section>
 
 	<script>
@@ -106,6 +122,27 @@
             localStorage.setItem("lastPlayed", "Number Guessing Game");
             window.location.href = "Number Guessing Game/NumberGuessingGame.html";
         }
+
+        function loadBlackjack() {
+            localStorage.setItem("lastPlayed", "Blackjack");
+            window.location.href = "Blackjack/Blackjack.html";
+        }
+
+        function loadRockPaperScissors() {
+            localStorage.setItem("lastPlayed", "Rock Paper Scissors");
+            window.location.href = "Rock Paper Scissors/RockPaperScissors.html";
+        }
+
+        function loadMinesweeper() {
+            localStorage.setItem("lastPlayed", "Minesweeper");
+            window.location.href = "Minesweeper/Minesweeper.html";
+        }
+
+        function loadSimonGame() {
+            localStorage.setItem("lastPlayed", "Simon Game");
+            window.location.href = "Simon game/SimonGame.html";
+        }
+
 
 
         function playAgain() {
